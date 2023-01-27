@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: radial-gradient(rgb(2, 2, 80), rgb(1, 1, 70), rgb(1, 1, 28));
+    height: 100vh;
+}
+
+
+.game{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    object-fit: cover;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 50px;
+    filter: drop-shadow(2px 2px 15px white);
+
+}
+.game>figure{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    animation: horse linear infinite 3.5s;
+}
+
+.game::after{
+    content: '';
+    display: flex;
+    width: 30px;
+    height: 5px;
+    background-color: brown;
+    position: absolute;
+    bottom: 100px;
+    right: 75px;
+    animation: line1 linear infinite 3.5s;
+
+}
+
+.game>figure>img{
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+
+@keyframes line1 {
+    0%{
+        right: 5%;
+        transform: rotate(45deg);
+    }
+
+    100%{
+        right: 100%;
+        transform: rotate(45deg);
+
+    }
+    
+}
+
+
+@keyframes horse {
+    0%{transform: translateY(0);}
+    20%{transform: translateY(0px);}
+    30%{transform: translateY(0px);}
+    40%{transform: translateY(0px);}
+    55%{transform: translateY(0px);}
+    70%{transform: translateY(0px);}
+    75%{transform: translateY(-50px)rotate(45deg);}
+    80%{transform: translateY(-90px);}
+    80%{transform: translateY(-90px);}
+    100%{transform: translateY(0px)rotate(-5deg);}
+}
+
+.game>h1{
+    font-size: 30px;
+    color: orangered;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    text-transform: capitalize;
+}
+
+
